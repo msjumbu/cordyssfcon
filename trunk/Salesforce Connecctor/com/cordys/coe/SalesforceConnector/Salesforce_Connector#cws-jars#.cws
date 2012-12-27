@@ -1,0 +1,91 @@
+
+<JavaArchiveSource
+	xmlns:cws="http://schemas.cordys.com/cws/1.0"
+	type="com.cordys.cws.documenttypes.javaarchivesource.JavaArchiveSource"
+	RuntimeDocumentID="0026B997-2E20-11E2-E822-1F6DD00F9BC0">
+	<DocumentID>0026B997-2E20-11E2-E822-1F6DD00F7BC0</DocumentID>
+	<Name>Salesforce_Connector</Name>
+	<Description>Salesforce_Connector</Description>
+	<CreatedBy>senthil</CreatedBy>
+	<CreationDate>2012-12-08T17:12:39.449</CreationDate>
+	<Notes/>
+	<JarFileName>Salesforce_Connector</JarFileName>
+	<NamespacePrefix></NamespacePrefix>
+	<Dependencies>
+		<JavaArchiveBinaryDependency
+			type="com.cordys.cws.documenttypes.javaarchivesource.JavaArchiveBinaryDependency"
+			RuntimeDocumentID="0026B997-2E20-11E2-E822-1F6DD00D5BC0">
+			<DocumentID>0026B997-2E20-11E2-E822-1F6DD00D3BC0</DocumentID>
+			<Name>0026B997-2E20-11E2-E822-1F6DD00D3BC0</Name>
+			<Description>Salesforce Connecctor_com_cordys_coe_SalesforceConnector_SFLibrary_partner.jar</Description>
+			<CreatedBy>senthil</CreatedBy>
+			<CreationDate>2012-12-08T17:18:13.736</CreationDate>
+			<Notes/>
+			<DependsOnJAR>
+				<uri
+					id="0026B997-2E20-11E2-E82B-510DFD2B9BC0"
+					path="Salesforce Connecctor/com/cordys/coe/SalesforceConnector/SFLibrary/partner.jar"
+					type="com.cordys.cws.documenttypes.javaarchive.JavaArchiveBinary"
+				/>
+			</DependsOnJAR>
+		</JavaArchiveBinaryDependency>
+		<JavaArchiveBinaryDependency
+			type="com.cordys.cws.documenttypes.javaarchivesource.JavaArchiveBinaryDependency"
+			RuntimeDocumentID="0026B997-2E20-11E2-E822-1F6DD00C9BC0">
+			<DocumentID>0026B997-2E20-11E2-E82B-676442E49BC0</DocumentID>
+			<Name>0026B997-2E20-11E2-E82B-676442E49BC0</Name>
+			<Description>Salesforce Connecctor_com_cordys_coe_SalesforceConnector_SFLibrary_wsc-22.jar</Description>
+			<CreatedBy>senthil</CreatedBy>
+			<CreationDate>2012-12-08T17:18:13.736</CreationDate>
+			<Notes/>
+			<DependsOnJAR>
+				<uri
+					id="0026B997-2E20-11E2-E82B-668E87CCBBC0"
+					path="Salesforce Connecctor/com/cordys/coe/SalesforceConnector/SFLibrary/wsc-22.jar"
+					type="com.cordys.cws.documenttypes.javaarchive.JavaArchiveBinary"
+				/>
+			</DependsOnJAR>
+		</JavaArchiveBinaryDependency>
+		<JavaArchiveBinaryDependency
+			type="com.cordys.cws.documenttypes.javaarchivesource.JavaArchiveBinaryDependency"
+			RuntimeDocumentID="0026B997-2E20-11E2-E850-819935633BC0">
+			<DocumentID>0026B997-2E20-11E2-E850-819935631BC0</DocumentID>
+			<Name>0026B997-2E20-11E2-E850-819935631BC0</Name>
+			<Description>Salesforce Connecctor_com_cordys_coe_SalesforceConnector_SFLibrary_wsdl4j.jar</Description>
+			<CreatedBy>senthil</CreatedBy>
+			<CreationDate>2012-12-10T04:45:33.336</CreationDate>
+			<Notes/>
+			<DependsOnJAR>
+				<uri
+					id="0026B997-2E20-11E2-E850-8A74791CDBC0"
+					path="Salesforce Connecctor/com/cordys/coe/SalesforceConnector/SFLibrary/wsdl4j.jar"
+					type="com.cordys.cws.documenttypes.javaarchive.JavaArchiveBinary"
+				/>
+			</DependsOnJAR>
+		</JavaArchiveBinaryDependency>
+		<JavaArchiveBinaryDependency
+			type="com.cordys.cws.documenttypes.javaarchivesource.JavaArchiveBinaryDependency"
+			RuntimeDocumentID="0026B997-2E20-11E2-E850-819935619BC0">
+			<DocumentID>0026B997-2E20-11E2-E850-819935617BC0</DocumentID>
+			<Name>0026B997-2E20-11E2-E850-819935617BC0</Name>
+			<Description>Salesforce Connecctor_com_cordys_coe_SalesforceConnector_SFLibrary_qname.jar</Description>
+			<CreatedBy>senthil</CreatedBy>
+			<CreationDate>2012-12-10T04:45:33.336</CreationDate>
+			<Notes/>
+			<DependsOnJAR>
+				<uri
+					id="0026B997-2E20-11E2-E850-8B7F71D6BBC0"
+					path="Salesforce Connecctor/com/cordys/coe/SalesforceConnector/SFLibrary/qname.jar"
+					type="com.cordys.cws.documenttypes.javaarchive.JavaArchiveBinary"
+				/>
+			</DependsOnJAR>
+		</JavaArchiveBinaryDependency>
+	</Dependencies>
+	<SourceFolder>
+		<uri
+			id="0026B997-2E20-11E2-E80B-029993A6BBC0"
+			path="Salesforce Connecctor/Java/src"
+			type="com.cordys.cws.runtime.types.folder.StudioFolder"
+		/>
+	</SourceFolder>
+</JavaArchiveSource>

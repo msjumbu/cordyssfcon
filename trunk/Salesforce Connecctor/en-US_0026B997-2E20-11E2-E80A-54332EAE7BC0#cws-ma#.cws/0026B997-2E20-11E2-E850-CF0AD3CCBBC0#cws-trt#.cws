@@ -1,0 +1,23 @@
+
+<TranslatedText
+	xmlns:cws="http://schemas.cordys.com/cws/1.0"
+	type="com.cordys.translation.TranslatedText"
+	RuntimeDocumentID="0026B997-2E20-11E2-E850-CF0AD3CCDBC0">
+	<DocumentID>0026B997-2E20-11E2-E850-CF0AD3CCBBC0</DocumentID>
+	<Name>0026B997-2E20-11E2-E850-CF0AD3CCBBC0</Name>
+	<Description>Create</Description>
+	<CreatedBy>senthil</CreatedBy>
+	<CreationDate>2012-12-10T05:17:48.948</CreationDate>
+	<Notes/>
+	<Text>Create</Text>
+	<Language>
+		<uri
+			id="0026B997-2E20-11E2-E80A-54332EAE3BC0"
+		/>
+	</Language>
+	<TextIdentifier>
+		<uri
+			id="0026B997-2E20-11E2-E850-CF0AD3CC7BC0"
+		/>
+	</TextIdentifier>
+</TranslatedText>
