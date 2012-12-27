@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="E:/sf/partner.jar"/>
+	<classpathentry kind="lib" path="E:/sf/wsc-22.jar"/>
+	<classpathentry kind="lib" path="E:/Program Files/Cordys/defaultInst/components/basicutil/basicutil.jar"/>
+	<classpathentry kind="lib" path="E:/Program Files/Cordys/defaultInst/components/eibxml/eibxml.jar"/>
+	<classpathentry kind="lib" path="E:/Program Files/Cordys/defaultInst/components/esbclient/esbclient.jar"/>
+	<classpathentry kind="lib" path="E:/Program Files/Cordys/defaultInst/components/esbserver/esbserver.jar"/>
+	<classpathentry kind="lib" path="E:/Program Files/Cordys/defaultInst/components/managementlib/managementlib.jar"/>
+	<classpathentry kind="lib" path="E:/sf/qname.jar"/>
+	<classpathentry kind="lib" path="E:/sf/wsdl4j.jar"/>
+	<classpathentry kind="output" path="~bin"/>
+</classpath>

@@ -1,0 +1,345 @@
+
+<XFormDesigntime
+	xmlns:cws="http://schemas.cordys.com/cws/1.0"
+	type="com.cordys.xforms.XFormDesigntime"
+	typeVersion="002481EE-993D-11E2-E030-02C88B2B3B65"
+	RuntimeDocumentID="0026B997-2E20-11E2-E80A-882F61B01BC0">
+	<DocumentID>0026B997-2E20-11E2-E80A-882F61AFFBC0</DocumentID>
+	<Name>SalesforceConfig</Name>
+	<Description>SalesforceConfig</Description>
+	<CreatedBy>senthil</CreatedBy>
+	<CreationDate>2012-12-07T09:57:29.637</CreationDate>
+	<Notes/>
+	<XFormContent>
+		<xformhtml
+			xmlns="http://schemas.cordys.com/1.0/xform"
+			xmlns:xforms="http://www.w3.org/2002/xforms/cr"
+			xmlns:ev="http://www.w3.org/2001/xml-events"
+			xmlns:wcpforms="http://schemas.cordys.com/wcp/xforms"
+			xformsversion="2"
+			focusatstartup="true"
+			showNotify="true"
+			showError="true">
+			<xhead>
+				<script
+					src="/cordys/wcp/admin/behavior/applicationconnector.js"
+				/>
+			</xhead>
+			<xbody>
+				<xforms:group
+					wcpforms:layout="vertical"
+					id="xbody_group"
+					wcpforms:labelalign="ontop">
+					<xforms:input
+						wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsInput"
+						id="uname"
+						doEBIValidate="false"
+						wcpforms:class="v_layout"
+						wcpforms:size="null 30.383333206176758px">
+						<xforms:label
+							textIdentifier="0026B997-2E20-11E2-E858-0809FAF31BC0"
+							wcpforms:class="v_label">User Name</xforms:label>
+						<xforms:action
+							ev:event="xforms-value-changed">
+							<xforms:uname_Change/>
+						</xforms:action>
+					</xforms:input>
+					<xforms:secret
+						wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsPassword"
+						id="passwd"
+						doEBIValidate="false"
+						wcpforms:class="v_layout"
+						wcpforms:size="null 30.383333206176758px">
+						<xforms:label
+							textIdentifier="0026B997-2E20-11E2-E858-7073D07C3BC0"
+							wcpforms:class="v_label">Password</xforms:label>
+						<xforms:action
+							ev:event="xforms-value-changed">
+							<xforms:passwd_Change/>
+						</xforms:action>
+					</xforms:secret>
+					<xforms:input
+						wcpforms:designLibrary="cas.xforms.designerlibrary.controls.XFormsInput"
+						id="seccode"
+						doEBIValidate="false"
+						wcpforms:class="v_layout"
+						wcpforms:size="null 30.383333206176758px">
+						<xforms:label
+							textIdentifier="0026B997-2E20-11E2-E858-7073D07A7BC0"
+							wcpforms:class="v_label">Security Code</xforms:label>
+						<xforms:action
+							ev:event="xforms-value-changed">
+							<xforms:seccode_Change/>
+						</xforms:action>
+					</xforms:input>
+				</xforms:group>
+			</xbody>
+			<xformsscript>
+				<![CDATA[var formLoaded = false;
+
+function trimSpace(str)
+{
+     return str.replace(/^\s+/g, '').replace(/\s+$/g, '');
+}
+
+// validates the user input
+function validate()
+{
+    if(trimSpace(uname.value) == "" || trimSpace(passwd.value) == "" || trimSpace(seccode.value) == "")
+     {
+            application.showError("Please provide all fields");
+            return false
+     }
+
+    return true;
+}
+
+// This function fills in the xml
+function createConnectorConfiguration(configurationNode)
+{
+    if (! validate()) return false;
+    addXMLNode(configurationNode, "sfUName", uname.value);
+    addXMLNode(configurationNode, "sfPasswd", passwd.value);
+    addXMLNode(configurationNode, "sfSecCode", seccode.value);
+
+    return true;
+}
+
+function addXMLNode(parentNode, nodeName, nodeText)
+{
+    var newNode = cordys.createElementNS(parentNode.ownerDocument, "", nodeName); 
+    if (nodeText)
+        cordys.setTextContent(newNode, nodeText);
+    cordys.appendXMLNode(newNode, parentNode);
+}
+
+
+function initializeLibrary()
+{
+    if(window.parent.opener)
+        application.organization = window.parent.opener.window.application.organization;
+
+	initialize();
+}
+
+// This function fills in the values
+function fillInPropertyScreen(configurationNode)
+{
+    uname.value = getNodeText(configurationNode,"//sfUName","");
+    passwd.value = getNodeText(configurationNode,"//sfPasswd","");
+    seccode.value = getNodeText(configurationNode,"//sfSecCode","");
+}
+
+
+// returns the text value of the node selected using the searchPath
+function getNodeText(node, searchPath, defaultValue)
+{
+    return cordys.getNodeText(node, searchPath, "");
+}
+
+function Form_InitDone(eventObject)
+{
+    initializeLibrary();
+    formLoaded = true;
+}
+
+function raiseConfigurationChanges()
+{
+    if(formLoaded && !application.container.isWizardContainer)
+    {
+	system.windows.servicepropertiesPage_SystemResourceManager.configurationChanged();
+    }
+}
+function uname_Change(eventObject)
+{
+    raiseConfigurationChanges();
+}
+function passwd_Change(eventObject)
+{
+    raiseConfigurationChanges();
+}
+function seccode_Change(eventObject)
+{
+    raiseConfigurationChanges();
+}
+]]>
+			</xformsscript>
+			<xforms:action
+				ev:event="xforms-initialize-done">
+				<xforms:Form_InitDone/>
+			</xforms:action>
+		</xformhtml>
+	</XFormContent>
+	<XFormWSDL/>
+	<automatic>false</automatic>
+	<caption></caption>
+	<data/>
+	<height></height>
+	<isInternal>false</isInternal>
+	<isLegacy>false</isLegacy>
+	<left></left>
+	<mode>full</mode>
+	<parameters/>
+	<qualifiedclassname></qualifiedclassname>
+	<showOnStartPage>false</showOnStartPage>
+	<taskDescription>SalesforceConfig</taskDescription>
+	<taskName>SalesforceConfig</taskName>
+	<title>true</title>
+	<top></top>
+	<type>XForm</type>
+	<width></width>
+	<CompositeControls/>
+	<Htms/>
+	<Images/>
+	<InstanceSchemaFragments/>
+	<Javascripts/>
+	<ReferredXForms/>
+	<Representations/>
+	<StyleSheets/>
+	<TranslatableApplications/>
+	<TranslatableName>
+		<TranslatableText
+			type="com.cordys.translation.TranslatableText"
+			RuntimeDocumentID="0026B997-2E20-11E2-E80A-882F61AEDBC0">
+			<DocumentID>0026B997-2E20-11E2-E80A-882F61AEBBC0</DocumentID>
+			<Name>0026B997-2E20-11E2-E80A-882F61AEBBC0</Name>
+			<Description>0026B997-2E20-11E2-E80A-882F61AEBBC0</Description>
+			<CreatedBy>senthil</CreatedBy>
+			<CreationDate>2012-12-07T09:57:29.642</CreationDate>
+			<Notes/>
+			<Identifier>
+				<uri
+					id="0026B997-2E20-11E2-E80A-882F61AEFBC0"
+				/>
+			</Identifier>
+		</TranslatableText>
+	</TranslatableName>
+	<TranslatableUITexts>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="0026B997-2E20-11E2-E858-0809FAF3BBC0">
+			<DocumentID>0026B997-2E20-11E2-E858-0809FAF39BC0</DocumentID>
+			<Name>0026B997-2E20-11E2-E858-0809FAF39BC0</Name>
+			<Description>0026B997-2E20-11E2-E858-0809FAF39BC0</Description>
+			<CreatedBy>senthil</CreatedBy>
+			<CreationDate>2012-12-10T12:17:27.495</CreationDate>
+			<Notes/>
+			<UIRef>uname</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					RuntimeDocumentID="0026B997-2E20-11E2-E858-0809FAF2FBC0">
+					<DocumentID>0026B997-2E20-11E2-E858-7073D07DBBC0</DocumentID>
+					<Name>0026B997-2E20-11E2-E858-7073D07DBBC0</Name>
+					<Description>0026B997-2E20-11E2-E858-7073D07DBBC0</Description>
+					<CreatedBy>senthil</CreatedBy>
+					<CreationDate>2012-12-10T12:17:27.493</CreationDate>
+					<Notes/>
+					<Identifier>
+						<uri
+							id="0026B997-2E20-11E2-E858-0809FAF31BC0"
+						/>
+					</Identifier>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="0026B997-2E20-11E2-E80A-882F61AFFBC0"
+				/>
+			</XForm>
+		</TranslatableUIText>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="0026B997-2E20-11E2-E858-7073D07CDBC0">
+			<DocumentID>0026B997-2E20-11E2-E858-7073D07CBBC0</DocumentID>
+			<Name>0026B997-2E20-11E2-E858-7073D07CBBC0</Name>
+			<Description>0026B997-2E20-11E2-E858-7073D07CBBC0</Description>
+			<CreatedBy>senthil</CreatedBy>
+			<CreationDate>2012-12-10T12:17:27.494</CreationDate>
+			<Notes/>
+			<UIRef>passwd</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					RuntimeDocumentID="0026B997-2E20-11E2-E858-7073D07C1BC0">
+					<DocumentID>0026B997-2E20-11E2-E858-7073D07BFBC0</DocumentID>
+					<Name>0026B997-2E20-11E2-E858-7073D07BFBC0</Name>
+					<Description>0026B997-2E20-11E2-E858-7073D07BFBC0</Description>
+					<CreatedBy>senthil</CreatedBy>
+					<CreationDate>2012-12-10T12:17:27.495</CreationDate>
+					<Notes/>
+					<Identifier>
+						<uri
+							id="0026B997-2E20-11E2-E858-7073D07C3BC0"
+						/>
+					</Identifier>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="0026B997-2E20-11E2-E80A-882F61AFFBC0"
+				/>
+			</XForm>
+		</TranslatableUIText>
+		<TranslatableUIText
+			type="com.cordys.xforms.TranslatableUIText"
+			RuntimeDocumentID="0026B997-2E20-11E2-E858-7073D07B1BC0">
+			<DocumentID>0026B997-2E20-11E2-E858-7073D07AFBC0</DocumentID>
+			<Name>0026B997-2E20-11E2-E858-7073D07AFBC0</Name>
+			<Description>0026B997-2E20-11E2-E858-7073D07AFBC0</Description>
+			<CreatedBy>senthil</CreatedBy>
+			<CreationDate>2012-12-10T12:17:27.494</CreationDate>
+			<Notes/>
+			<UIRef>seccode</UIRef>
+			<TooltipText/>
+			<TranslatableName>
+				<TranslatableText
+					type="com.cordys.translation.TranslatableText"
+					RuntimeDocumentID="0026B997-2E20-11E2-E858-7073D07A5BC0">
+					<DocumentID>0026B997-2E20-11E2-E858-7073D07A3BC0</DocumentID>
+					<Name>0026B997-2E20-11E2-E858-7073D07A3BC0</Name>
+					<Description>0026B997-2E20-11E2-E858-7073D07A3BC0</Description>
+					<CreatedBy>senthil</CreatedBy>
+					<CreationDate>2012-12-10T12:17:27.495</CreationDate>
+					<Notes/>
+					<Identifier>
+						<uri
+							id="0026B997-2E20-11E2-E858-7073D07A7BC0"
+						/>
+					</Identifier>
+				</TranslatableText>
+			</TranslatableName>
+			<XForm>
+				<uri
+					id="0026B997-2E20-11E2-E80A-882F61AFFBC0"
+				/>
+			</XForm>
+		</TranslatableUIText>
+	</TranslatableUITexts>
+	<Webservices/>
+	<aclFragments/>
+	<deliveryModels/>
+	<image/>
+	<input/>
+	<messageParts>
+		<MessagePart
+			type="com.cordys.task.MessagePart"
+			RuntimeDocumentID="0026B997-2E20-11E2-E858-7073D07A1BC0">
+			<DocumentID>0026B997-2E20-11E2-E858-7073D079FBC0</DocumentID>
+			<Name>freeformcontrols</Name>
+			<Description>freeformcontrols</Description>
+			<CreatedBy>senthil</CreatedBy>
+			<CreationDate>2012-12-10T12:17:27.495</CreationDate>
+			<Notes/>
+			<isRefExists>false</isRefExists>
+			<namespace>http://schemas.cordys.com/1.0/xforms/processapi</namespace>
+			<operationName>freeformcontrols</operationName>
+		</MessagePart>
+	</messageParts>
+	<messages/>
+	<output/>
+	<tagsContainer/>
+	<taskParts/>
+</XFormDesigntime>

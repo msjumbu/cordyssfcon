@@ -1,0 +1,50 @@
+
+<ApplicationConnectorDesigntime
+	xmlns:cws="http://schemas.cordys.com/cws/1.0"
+	type="com.cordys.applicationconnector.ApplicationConnectorDesigntime"
+	typeVersion="0014C25C-F38B-71DF-A966-2D0AC4143A56"
+	RuntimeDocumentID="0026B997-2E20-11E2-E80A-882F61AC5BC0">
+	<DocumentID>0026B997-2E20-11E2-E80A-882F61AC3BC0</DocumentID>
+	<Name>Salesforce Connector</Name>
+	<Description>Salesforce Connector</Description>
+	<CreatedBy>senthil</CreatedBy>
+	<CreationDate>2012-12-07T10:01:03.458</CreationDate>
+	<Notes/>
+	<ClassPath>/coe/SalesforceConnector/Salesforce_Connector.jar;/coe/SalesforceConnector/SFLibrary/partner.jar;/coe/SalesforceConnector/SFLibrary/wsc-22.jar;/coe/SalesforceConnector/SFLibrary/wsdl4j.jar;/coe/SalesforceConnector/SFLibrary/qname.jar;</ClassPath>
+	<ImplementationClass>com.cordys.coe.salesforce.connector.SalesforceConnector</ImplementationClass>
+	<LoggerCategoryGroups>
+		<loggercategory
+			xmlns:c="http://schemas.cordys.com/cws/1.0"
+			xmlns:SOAP="http://schemas.xmlsoap.org/soap/envelope/"
+			xmlns="">
+			<categorygroup
+				displayname="Salesforce Connector">
+				<category
+					inserted="true">com.cordys.coe.salesforce.connector.SalesforceConnector</category>
+			</categorygroup>
+		</loggercategory>
+	</LoggerCategoryGroups>
+	<StartupDependencies>
+		<startupDependency
+			xmlns:c="http://schemas.cordys.com/cws/1.0"
+			xmlns:SOAP="http://schemas.xmlsoap.org/soap/envelope/"
+			xmlns=""
+		/>
+	</StartupDependencies>
+	<SupportsJVMSharing>true</SupportsJVMSharing>
+	<ConfigurationPage>
+		<uri
+			id="0026B997-2E20-11E2-E80A-882F61AFFBC0"
+		/>
+	</ConfigurationPage>
+	<Image>
+		<uri
+			id="0026B997-2E20-11E2-E80B-005D5BBADBC0"
+			path="Salesforce Connecctor/com/cordys/coe/SalesforceConnector/Webcontent/salesforceconnector/images/forceapp_logo.gif"
+			type="com.cordys.cws.documenttypes.image.Gif"
+		/>
+	</Image>
+	<MetadataPage/>
+	<PropertyPage/>
+	<TypeImplementationMappings/>
+</ApplicationConnectorDesigntime>

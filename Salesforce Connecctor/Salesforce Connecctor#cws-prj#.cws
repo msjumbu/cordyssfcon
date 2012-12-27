@@ -1,0 +1,101 @@
+
+<Project
+	xmlns:cws="http://schemas.cordys.com/cws/1.0"
+	type="com.cordys.cws.documenttypes.project.Project"
+	typeVersion="0019B980-5ADC-71DF-9C5A-1C9DE0779704"
+	RuntimeDocumentID="0026B997-2E20-11E2-E80A-54332EAD9BC0">
+	<DocumentID>0026B997-2E20-11E2-E80A-54332EAD7BC0</DocumentID>
+	<Name>Salesforce Connecctor</Name>
+	<Description>Salesforce Connecctor</Description>
+	<CreatedBy>senthil</CreatedBy>
+	<CreationDate>2012-12-07T09:44:09.858</CreationDate>
+	<Notes/>
+	<NamespacePrefix></NamespacePrefix>
+	<ISVPackageInfo>
+		<ISVPackageInfo
+			type="com.cordys.cws.packaging.isvp.ISVPackageInfo"
+			typeVersion="00215A62-2E6A-11E1-FCAC-F71EBE253749"
+			RuntimeDocumentID="0026B997-2E20-11E2-E80A-54332EAF1BC0">
+			<DocumentID>0026B997-2E20-11E2-E80A-54332EAEFBC0</DocumentID>
+			<Name>Cordys Salesforce Connecctor</Name>
+			<Description>Cordys Salesforce Connecctor</Description>
+			<CreatedBy>senthil</CreatedBy>
+			<CreationDate>2012-12-07T09:44:09.892</CreationDate>
+			<Notes/>
+			<BuildNumber>10</BuildNumber>
+			<ISVPackageFileName>Cordys Salesforce Connecctor 0.10</ISVPackageFileName>
+			<ISVPackageOwner>Cordys</ISVPackageOwner>
+			<PackageForRuntime>true</PackageForRuntime>
+			<PostISVLoaderInformation/>
+			<Product>Salesforce Connecctor</Product>
+			<SupportedDeploymentSpaces
+				xmlns:cws="http://schemas.cordys.com/cws/1.0"
+				cws:type="collection">
+				<cws:item>SYSTEM</cws:item>
+			</SupportedDeploymentSpaces>
+			<Version>0</Version>
+			<LicenseAgreement/>
+			<ThirdPartyAgreement/>
+		</ISVPackageInfo>
+	</ISVPackageInfo>
+	<RuntimeQualifiedName/>
+	<SourceFolder>
+		<uri
+			id="0026B997-2E20-11E2-E80A-54332EAEBBC0"
+			path="Salesforce Connecctor"
+			type="com.cordys.cws.runtime.types.folder.StudioFolder"
+		/>
+	</SourceFolder>
+	<_AddOns>
+		<TranslationInformation
+			type="com.cordys.translation.TranslationInformation"
+			typeVersion="b81bb9b4-8af7-470f-a5fa-864be49acb9d"
+			RuntimeDocumentID="0026B997-2E20-11E2-E80A-54332EADDBC0">
+			<DocumentID>0026B997-2E20-11E2-E80A-54332EADBBC0</DocumentID>
+			<Name>TranslationInformation</Name>
+			<Description/>
+			<CreatedBy>senthil</CreatedBy>
+			<CreationDate>2012-12-07T09:44:09.855</CreationDate>
+			<Notes/>
+			<LanguagePacks>
+				<LanguagePack
+					type="com.cordys.translation.LanguagePack"
+					typeVersion="11456b87-q895-32f2-584q-58f3tlm2so65"
+					RuntimeDocumentID="0026B997-2E20-11E2-E80A-54332EAE5BC0">
+					<DocumentID>0026B997-2E20-11E2-E80A-54332EAE3BC0</DocumentID>
+					<Name>en-US</Name>
+					<Description/>
+					<CreatedBy>senthil</CreatedBy>
+					<CreationDate>2012-12-07T09:44:09.854</CreationDate>
+					<Notes/>
+					<Language>English - United States</Language>
+					<Texts>
+						<uri
+							id="0026B997-2E20-11E2-E80A-54332EAE7BC0"
+							path="Salesforce Connecctor/en-US_0026B997-2E20-11E2-E80A-54332EAE7BC0"
+							type="com.cordys.cws.associations.MergeableAssociation"
+						/>
+					</Texts>
+					<TranslationInformation>
+						<uri
+							id="0026B997-2E20-11E2-E80A-54332EADBBC0"
+						/>
+					</TranslationInformation>
+				</LanguagePack>
+			</LanguagePacks>
+			<ProjectLanguage>
+				<uri
+					id="0026B997-2E20-11E2-E80A-54332EAE3BC0"
+				/>
+			</ProjectLanguage>
+			<Texts>
+				<uri
+					id="0026B997-2E20-11E2-E80A-54332EADFBC0"
+					path="Salesforce Connecctor/TranslationInformation_0026B997-2E20-11E2-E80A-54332EADFBC0"
+					type="com.cordys.cws.associations.MergeableAssociation"
+				/>
+			</Texts>
+			<TranslationInformation/>
+		</TranslationInformation>
+	</_AddOns>
+</Project>

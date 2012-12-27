@@ -1,0 +1,24 @@
+
+<TextIdentifier
+	xmlns:cws="http://schemas.cordys.com/cws/1.0"
+	type="com.cordys.translation.TextIdentifier"
+	typeVersion="55890f21-u239-76j6-988a-92j7opq6ws09"
+	RuntimeDocumentID="0026B997-2E20-11E2-E80A-882F61AF1BC0">
+	<DocumentID>0026B997-2E20-11E2-E80A-882F61AEFBC0</DocumentID>
+	<Name>0026B997-2E20-11E2-E80A-882F61AEFBC0</Name>
+	<Description>SalesforceConfig</Description>
+	<CreatedBy>senthil</CreatedBy>
+	<CreationDate>2012-12-07T09:57:29.638</CreationDate>
+	<Notes/>
+	<DefaultText>SalesforceConfig</DefaultText>
+	<TranslationInformation>
+		<uri
+			id="0026B997-2E20-11E2-E80A-54332EADBBC0"
+		/>
+	</TranslationInformation>
+	<Translations>
+		<uri
+			id="0026B997-2E20-11E2-E80A-882F61AF3BC0"
+		/>
+	</Translations>
+</TextIdentifier>

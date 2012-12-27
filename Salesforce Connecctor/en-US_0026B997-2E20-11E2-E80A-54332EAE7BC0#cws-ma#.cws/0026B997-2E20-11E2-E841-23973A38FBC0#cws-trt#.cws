@@ -1,0 +1,23 @@
+
+<TranslatedText
+	xmlns:cws="http://schemas.cordys.com/cws/1.0"
+	type="com.cordys.translation.TranslatedText"
+	RuntimeDocumentID="0026B997-2E20-11E2-E841-23973A391BC0">
+	<DocumentID>0026B997-2E20-11E2-E841-23973A38FBC0</DocumentID>
+	<Name>0026B997-2E20-11E2-E841-23973A38FBC0</Name>
+	<Description>Calculated</Description>
+	<CreatedBy>senthil</CreatedBy>
+	<CreationDate>2012-12-09T14:06:17.73</CreationDate>
+	<Notes/>
+	<Text>Calculated</Text>
+	<Language>
+		<uri
+			id="0026B997-2E20-11E2-E80A-54332EAE3BC0"
+		/>
+	</Language>
+	<TextIdentifier>
+		<uri
+			id="0026B997-2E20-11E2-E841-23973A38BBC0"
+		/>
+	</TextIdentifier>
+</TranslatedText>
