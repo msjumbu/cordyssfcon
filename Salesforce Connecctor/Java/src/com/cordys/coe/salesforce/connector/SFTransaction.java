@@ -17,10 +17,6 @@ import com.sforce.ws.ConnectionException;
  * 
  */
 public class SFTransaction implements ApplicationTransaction {
-	
-	//static final String USERNAME = "senthilkumar@gmail.com";
-	//static final String PASSWORD = "p0cs1998r8rhnPtX9jupZNUCXgqljXtu";
-
 
 	private String implType = "";
 	CordysLogger logger = null;
